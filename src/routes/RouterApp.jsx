@@ -4,20 +4,22 @@ import SignupPage from "../pages/SignupPage";
 import AddCodePage from "../pages/AddCodePage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import ForgetPasswordPage from "../pages/ForgetPasswordPage";
+import Mainlayout from "../layouts/Mainlayout";
 // import HomePage from "../pages/HomePage";
 
 export default function RouterApp() {
     return (
         <>
             <Routes>
-                <Route path="/" element={<h1>hi</h1>} />
-
+                <Route path="/" element={<Mainlayout/>} >
+                <Route index element={<h1>h1</h1>} />
                 {/* Auth Pages */}
                 <Route path="login" element={<LoginPage />} />
                 <Route path="signup" element={<SignupPage />} />
                 <Route path="add-code" element={<AddCodePage />} />
                 <Route path="reset-password" element={<ResetPasswordPage />} />
                 <Route path="forget-password" element={<ForgetPasswordPage />} />
+                </Route>
             </Routes>
         </>
     )

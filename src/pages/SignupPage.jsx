@@ -58,9 +58,7 @@ export default function SignupPage() {
 
     return (
         <>
-            <div className='h-84.5'>
-                <Herosection />
-            </div>
+
             <div className="w-full  bg-[#F5F5F5] flex flex-col items-center justify-center gap-6 ">
                 {/* logic componant (formik) */}
                 <Formik initialValues={{
@@ -144,7 +142,6 @@ export default function SignupPage() {
                     </Form>
                 </Formik>
             </div>
-            <Footer/>
         </>
     )
 }
