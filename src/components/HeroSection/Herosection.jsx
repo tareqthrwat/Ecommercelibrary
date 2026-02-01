@@ -1,10 +1,14 @@
 import Hero from "./Hero";
 
 
-export default function Herosection({h}) {
+export default function Herosection({ h , showSearch}) {
   return (
-    <div className={h}>
-      <Hero />
-    </div>
+    <>
+      
+      <div className={`${h}`}>
+        <Hero showSearch ={showSearch}/>
+        
+      </div>
+    </>
   )
 }
