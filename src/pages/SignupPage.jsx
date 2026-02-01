@@ -86,7 +86,7 @@ export default function SignupPage() {
                         <UiComponant name="email" label="Email" placeholder="example@gmail.com" type="email" />
 
                         <UiComponant name="password" label="Password" placeholder="Enter password" type="password" />
-                        <UiComponant name="Confirmpassword" label="Confirm password" placeholder="Enter your password" type="password" />
+                        <UiComponant name="confirmpassword" label="Confirm password" placeholder="Enter your password" type="confirmpassword" />
 
                         <SoBtn p="Already have an account?" to={"/login"} ptow=" Login" ask=" " stet=" Agree with Terms & Conditions" btn="Sign Up" />
 
