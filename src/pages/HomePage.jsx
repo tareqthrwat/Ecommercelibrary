@@ -3,7 +3,7 @@ import { domain } from "../store/domain";
 import Herosection from "../components/HeroSection/Herosection";
 import Assemble from "../components/sectionhome/Assemble";
 import BestSellerSection from "../components/Best-Seller/BestSellerSection";
-import MainBookCard from "../components/bookCard/MainBookCard";
+import SectionRecomendedCard from "../components/recomended/SectionRecomendedCard";
 import FlashSale from "../components/sectionsFlashSale/FlashSale";
 
 
@@ -45,11 +45,10 @@ export default function HomePage() {
                 <div className="w-full bg-[#3B2F4A]">
                     <BestSellerSection />
                 </div>
-                <div className="container flex  m-auto p-20 gap-6">
-                    <MainBookCard />
-                    <MainBookCard />
+                <div className="container flex bg-backGrond h-164.75 m-auto py-4">
+                    <SectionRecomendedCard />
                 </div>
-                <div>
+                <div className="w-full m-auto">
                     <FlashSale />
                 </div>
             </div>
