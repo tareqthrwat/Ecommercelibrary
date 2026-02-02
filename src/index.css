@@ -2,5 +2,12 @@
 @plugin "daisyui";
 
 @theme {
-    --color-mainColor: #D9176C;
+  --color-backGrond: #f5f5f5;
+  --color-mainColor: #d9176c;
+  --color-scandColor: #3b2f4a;
+  --font-open: "Open Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+* {
+  font-family: "Open Sans", ui-sans-serif, system-ui, sans-serif;
 }
