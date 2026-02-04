@@ -7,8 +7,11 @@ import SoBtn from '../components/Authentication/SoBtn';
 import toast, { Toaster } from 'react-hot-toast';
 import { domain } from '../store/domain';
 import Herosection from '../components/HeroSection/Herosection';
+import { useAuthStore } from '../store';
 
 export default function LoginPage() {
+  const { login } = useAuthStore();
+  
   const navigate = useNavigate();
 
   const validationSchema = Yup.object({
@@ -21,10 +24,11 @@ export default function LoginPage() {
 
     try {
       const res = await axios.post(url, values);
-      console.log(res.data);
+       const { token } = res.data.data;
+       login(token, values.rememberMe || false);
+      console.log(res.data.data.token);
       toast.success(res.data.message)
-      sessionStorage.setItem('token', res.data.data.token);
-      navigate("/");
+      // navigate("/");
 
     } catch (error) {
       toast.error(error.response?.data?.message);
@@ -40,14 +44,14 @@ export default function LoginPage() {
 
         <div className="flex flex-col w-full items-center">
           <Formik
-            initialValues={{ email: '', password: '' }}
+            initialValues={{ email: '', password: '',rememberMe: false  }}
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
             <Form className="w-200 p-4   flex flex-col gap-6">
               <UiComponant name="email" label="Email" placeholder="example@gmail.com" type="email" />
               <UiComponant name="password" label="Password" placeholder="Enter password" type="password" />
-              <SoBtn p="Don’t have an account?" to={"/signup"} ptow=" Signup" ask="Forget password?" stet="Remember me" btn="Log in" />
+              <SoBtn p="Don’t have an account?" to={"/signup"} ptow=" Signup" ask="Forget password?" stet="Remember me" btn="Log in"  name="rememberMe" />
             </Form>
           </Formik>
         </div>

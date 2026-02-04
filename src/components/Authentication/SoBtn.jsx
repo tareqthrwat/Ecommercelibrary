@@ -1,12 +1,14 @@
 import { Link } from "react-router-dom";
 import BtnType from "../ui/BtnType";
+import { Field } from "formik";
 
-export default function SoBtn({p,to ,ptow , ask , stet , btn}) {
+export default function SoBtn({p,to ,ptow , ask , stet , btn , name}) {
     return (
         <div>
             <div className='flex justify-between items-center'>
                 <div className='flex gap-2 items-center'>
-                    <input type="checkbox" className=" checkbox checkbox-error" />
+                    <Field name={name}
+                    type="checkbox" className=" checkbox checkbox-error"   />
                     <span className='text-black'>{stet}</span>
                 </div>
                 <span className='text-mainColor active:text-[#8c1347]'>{ask}</span>
