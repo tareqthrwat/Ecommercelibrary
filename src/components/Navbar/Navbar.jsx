@@ -3,10 +3,10 @@ import LinkItem from "../ui/LinkItem";
 import Button from "../ui/Button";
 import { Link, useLocation } from "react-router-dom";
 import { useAuthStore } from "../../store";
-import UserName from "./UserName"
+import UserName from "./UserName";
 
 export default function Navbar() {
-const { isAuthenticated } = useAuthStore();
+  const { isAuthenticated } = useAuthStore();
   const location = useLocation();
   let links = [
     { nav: "home", path: "/" },
@@ -41,7 +41,9 @@ const { isAuthenticated } = useAuthStore();
             </div>
           </div>
           {isAuthenticated ? (
-            <UserName />
+            <div className="">
+              <UserName />
+            </div>
           ) : (
             <div className="nav-btns flex items-center gap-3">
               <Button className="w-fit" isMainBtn={true}>

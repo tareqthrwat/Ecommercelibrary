@@ -1,14 +1,14 @@
-import NavbarLogo from "../Navbar/NavbarLogo";
 import LinkItem from "../ui/LinkItem";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import { AiOutlineYoutube } from "react-icons/ai";
 import { FaEarthAmericas, FaXTwitter } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import NavbarLogo from "../Navbar/NavbarLogo";
 
 export default function Footer() {
   return (
-    <footer className="w-full bg-[#3B2F4A] text-white py-20 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col gap-8">
+    <footer className="w-full bg-scandColor text-white py-20 px-4">
+      <div className=" mx-auto flex flex-col gap-8 container">
         {/* الجزء العلوي */}
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col md:flex-row items-center gap-10">
@@ -49,7 +49,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="flex items-center gap-3 bg-[#4B3D5A] px-4 py-2 rounded-lg cursor-pointer hover:bg-[#524463] transition-all">
+          <div className="flex items-center gap-3  px-4 py-2 rounded-lg cursor-pointer hover:bg-[#524463] transition-all">
             <FaEarthAmericas />
             <span className="flex items-center font-medium">
               English <MdKeyboardArrowRight className="text-xl" />
