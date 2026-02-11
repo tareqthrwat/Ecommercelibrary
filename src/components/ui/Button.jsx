@@ -2,7 +2,7 @@ export default function Button({ children, isMainBtn, className }) {
   return (
     <>
       <button
-        className={`${className} px-4 py-3 capitalize rounded-lg border border-mainColor
+        className={`${className? className :  " rounded-lg  px-4 py-3  "}capitalize border border-mainColor
           ${
             isMainBtn
               ? "bg-mainColor text-white hover:bg-white hover:shadow hover:shadow-mainColor hover:text-mainColor"
