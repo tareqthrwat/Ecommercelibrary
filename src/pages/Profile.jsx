@@ -22,7 +22,7 @@ export default function Profile() {
 
                     </div >
                     <div className="relative">
-                        <Button isMainBtn={true} className=" flex items-center justify-center rounded-full w-[33px] h-[33px] -top-20 -right-15  absolute  " >
+                        <Button isMainBtn={true} classn=" flex items-center justify-center rounded-full w-[33px] h-[33px] -top-20 -right-15  absolute  " >
                             <LiaPenAltSolid />
                         </Button>
 
