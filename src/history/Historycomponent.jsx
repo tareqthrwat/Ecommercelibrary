@@ -1,11 +1,16 @@
 import { FaRegTrashAlt } from "react-icons/fa";
-import { FaCheck } from "react-icons/fa6";
+import Steps from "../components/ui/Steps";
 
+import { HiOutlineArrowRight } from "react-icons/hi";
 
-
-export default function Historycomponent() {
+export default function Historycomponent({ or, className }) {
+    const steps = [
+        { id: 1, title: "Order placed", completed: true },
+        { id: 2, title: "Shipping", completed: false },
+        { id: 3, title: "Delivered", completed: false },
+    ];
     return (
-        <div className='bg-[#FFFFFF] p-6 rounded-xl'>
+        <div className={`bg-[#FFFFFF] p-6 rounded-xl ${className}`}>
             <div className="text-[#D9176C80] flex justify-end ">
                 <FaRegTrashAlt size={30} />
             </div>
@@ -24,19 +29,26 @@ export default function Historycomponent() {
                     <h1>Maadi, Cairo, Egypt.</h1>
                 </div>
             </div>
-            <div className="flex items-center justify-center">
-                <ul className="steps">
-                    <li className="step step-neutral">
-                        <span className="step-icon"><FaCheck/> </span>Order placed
-                    </li>
-                    <li className="step step-neutral">
-                        <span className="step-icon"><FaCheck/></span>Order placed
-                    </li>
-                    <li className="step">
-                        <span className="step-icon"><FaCheck/></span>Order placed
-                    </li>
-                </ul>
-            </div>
+            {
+                or ? (
+
+                        <div className="flex items-center justify-center mt-9 w-full  ">
+                            <Steps steps={steps} />
+                        </div>
+
+                ) :
+                    (
+
+                        <div className="text-[22px] text-[#D9176C] font-semibold flex items-center gap-6  mt-9 p-2">
+                            <h1 >
+                                View order detail
+                            </h1>
+                            <span>
+                                <HiOutlineArrowRight />
+                            </span>
+                        </div>
+                    )
+            }
         </div>
     )
 }
