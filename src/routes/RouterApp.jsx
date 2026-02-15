@@ -5,7 +5,7 @@ import AddCodePage from "../pages/AddCodePage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import ForgetPasswordPage from "../pages/ForgetPasswordPage";
 import HomePage from "../pages/HomePage";
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "../layouts/Mainlayout"
 import AboutusPage from "../pages/AboutusPage";
 import NotFondPage from "../pages/NotFondPage";
 import BookPage from "../pages/BookPage";
