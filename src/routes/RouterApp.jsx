@@ -5,13 +5,17 @@ import AddCodePage from "../pages/AddCodePage";
 import ResetPasswordPage from "../pages/ResetPasswordPage";
 import ForgetPasswordPage from "../pages/ForgetPasswordPage";
 import HomePage from "../pages/HomePage";
-import MainLayout from "../layouts/Mainlayout"
+import MainLayout from "../layouts/MainLayout";
 import AboutusPage from "../pages/AboutusPage";
 import NotFondPage from "../pages/NotFondPage";
 import BookPage from "../pages/BookPage";
 import Profile from "../pages/Profile";
-import History from "../pages/History";
-
+import ProductPage from "../pages/ProductPage";
+import CartPage from "../pages/CartPage";
+import WishList from "../pages/WishList";
+import { ProductDetails } from "../components/tabDetails/ProductDetails";
+import CustomerReviews from "../components/tabDetails/CustomerReviews";
+import MainRecomendedCard from "../components/recomended/MainRecomendedCard";
 
 export default function RouterApp() {
   return (
@@ -25,11 +29,27 @@ export default function RouterApp() {
           <Route path="signup" element={<SignupPage />} />
           <Route path="forget-password" element={<ForgetPasswordPage />} />
           <Route path="add-code" element={<AddCodePage />} />
+          <Route path="Profile" element={<Profile />} />
           <Route path="reset-password" element={<ResetPasswordPage />} />
           <Route path="book" element={<BookPage />} />
-          <Route path="Profile" element={<Profile />} />
-          <Route path="History" element={<History />} />
-          <Route path="*" element={<NotFondPage/>} />
+
+          <Route path="product/:productId" element={<ProductPage />}>
+            <Route path="details" element={<ProductDetails />} />
+            <Route path="review" element={<CustomerReviews />} />
+            <Route
+              path="recommided"
+              element={
+                <div className="flex gap-5">
+                  <MainRecomendedCard />
+                  <MainRecomendedCard />
+                </div>
+              }
+            />
+          </Route>
+
+          <Route path="Cart" element={<CartPage />} />
+          <Route path="wishlist" element={<WishList />} />
+          <Route path="*" element={<NotFondPage />} />
         </Route>
       </Routes>
     </>

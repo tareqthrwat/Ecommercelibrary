@@ -1,38 +1,34 @@
-import React from 'react'
-import BtnBook from './BtnBook'
+import { useState } from "react";
+import BtnBook from "./BtnBook";
 
 export default function Navbtn() {
-    return (
-        <>
-            <div className='flex gap-3.5'>
-                <BtnBook className="w-fit" isMainBtn={true}>
-                    Business
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Self Help
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    History
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Romance
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Fantasy
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Art
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Kids
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Music
-                </BtnBook>
-                <BtnBook className="w-fit" isMainBtn={false}>
-                    Cooking
-                </BtnBook>
-            </div>
-        </>
-    )
+  const [activeCategory, setActiveCategory] = useState("Business");
+
+  const links = [
+    { name: "Business", books: "" },
+    { name: "Self Help", books: "" },
+    { name: "History", books: "" },
+    { name: " Romance", books: "" },
+    { name: "Fantasy", books: "" },
+    { name: "Art", books: "" },
+    { name: "Music", books: "" },
+    { name: "Kids", books: "" },
+    { name: "Cooking", books: "" },
+  ];
+  return (
+    <>
+      <div className="flex flex-wrap gap-3 p-4">
+        {links.map((el, index) => (
+          <div key={index} onClick={() => setActiveCategory(el.name)}>
+            <BtnBook
+              // لو الاسم بتاع اللينك هو هو اللي في الـ state، يبقى هو الـ Active
+              isMainBtn={activeCategory === el.name}
+            >
+              {el.name}
+            </BtnBook>
+          </div>
+        ))}
+      </div>
+    </>
+  );
 }

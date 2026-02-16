@@ -10,7 +10,7 @@ export default function DropdownNav() {
             <div className="dropdown dropdown-center">
                 <div tabIndex={0} role="button" className=" text-2xl mb-3"><MdKeyboardArrowDown/></div>
                 <ul tabIndex="-1" className="dropdown-content bg-white menu font-semibold text-[#222222] rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li><Link to={"/Profile"}><RxPerson/>Profile</Link></li>
+                   <li><Link to={"/Profile"}><RxPerson/>Profile</Link></li>
                     <li><a><LuClock3 /> Order History</a></li>
                     <li><a><IoLocationOutline/> Address</a></li>
                     <li><a><LuCircleHelp/>Help</a></li>

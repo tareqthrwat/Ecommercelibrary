@@ -10,7 +10,7 @@ export default function FlashSale() {
 
   return (
     <div className="w-full bg-[#F5F5F5] h-176.5 flex items-center border-t border-[#22222233]">
-      <div className="container mx-auto max-w-6xl px-4 ">
+      <div className="container mx-auto px-4">
         {/* المكون الأول: الرأس */}
         <FlashSaleHeader
           title="Flash Sale"
@@ -19,9 +19,9 @@ export default function FlashSale() {
         />
 
         {/* المكون الثاني: السلايدر */}
-        
+        <div className="flex justify-center w-full">
           <FlashSaleSlider items={dummyItems} silider={silider} />
-        
+        </div>
       </div>
     </div>
   );
