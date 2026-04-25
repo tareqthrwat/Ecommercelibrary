@@ -1,8 +1,8 @@
 export default function BestSellerContant() {
   return (
-    <div className="flex flex-col text-center gap-2 w-129 ">
+    <div className="flex flex-col text-center gap-2 w-full ">
       <h2 className="text-[26px] font-bold ">Best Seller</h2>
-      <p className="text-[#FFFFFF80] w-129">
+      <p className="text-[#FFFFFF80] w-full">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
         ultricies est. Aliquam in justo varius, sagittis neque ut, malesuada
         leo.

@@ -17,10 +17,10 @@ export function ProductInfo({
   discountCode,
 }) {
   return (
-    <div className="w-full flex flex-col gap-4">
+    <div className="w-full lg:w-auto flex flex-col gap-4">
       <ProductHeader title={title} description={description} />
       <ProductMeta meta={meta} />
-      <div className="flex justify-between">
+      <div className="flex flex-col sm:flex-row sm:justify-between gap-4">
         <Rating {...rating} />
         <StockBadge
           stock={stock}
@@ -28,7 +28,7 @@ export function ProductInfo({
           discountCode={discountCode}
         />
       </div>
-      <div className="flex justify-between"> 
+      <div className="flex flex-col sm:flex-row sm:justify-between gap-4"> 
         <div className="">
           <Price {...price} />
         </div>

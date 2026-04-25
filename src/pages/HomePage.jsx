@@ -16,7 +16,7 @@ export default function HomePage() {
       <div className="w-full bg-[#3B2F4A]">
         <BestSellerSection />
       </div>
-      <div className="container flex bg-backGrond h-164.75 m-auto py-4">
+      <div className="container flex bg-backGrond h-auto lg:h-164.75 m-auto py-4">
         <SectionRecomendedCard />
       </div>
       <div className="w-full m-auto">

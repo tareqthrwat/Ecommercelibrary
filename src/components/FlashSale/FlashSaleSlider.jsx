@@ -6,7 +6,7 @@ const FlashSaleSlider = ({ items, silider }) => {
   const [swiperRef, setSwiperRef] = useState(null);
 
   return (
-    <div className="relative px-12 w-254">
+    <div className="relative px-4 sm:px-12 w-full max-w-4xl mx-auto">
       {/* زر السابق */}
       <button
         className="absolute left-0 top-1/2 -translate-y-1/2 z-30 w-11 h-11 bg-white rounded-full flex items-center justify-center shadow-lg border border-gray-100 hover:bg-gray-50 transition-all"
@@ -35,6 +35,7 @@ const FlashSaleSlider = ({ items, silider }) => {
         className="rounded-xl"
         breakpoints={{
           0: { slidesPerView: 1 },
+          640: { slidesPerView: 1.5 },
           768: { slidesPerView: 2 },
         }}
       >

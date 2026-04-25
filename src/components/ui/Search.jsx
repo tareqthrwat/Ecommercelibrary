@@ -4,7 +4,7 @@ import { GrMicrophone } from "react-icons/gr";
 export default function Search({ isMainBtn, width }) {
   return (
     <>
-      <div className="flex z-10 relative items-center">
+      <div className="w-full flex z-10 relative items-center">
         <input
           type="text"
           placeholder="Search"

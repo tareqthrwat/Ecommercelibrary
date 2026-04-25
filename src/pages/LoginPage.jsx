@@ -37,8 +37,8 @@ export default function LoginPage() {
   return (
     <>
       <Herosection h="h-84.5" />
-      <div className="w-full bg-[#F5F5F5] flex flex-col items-center justify-center gap-10 font-open pt-3">
-        <h1 className="font-semibold text-mainColor text-2xl">Welcome Back!</h1>
+      <div className="w-full bg-[#F5F5F5] flex flex-col items-center justify-center gap-10 font-open pt-3 px-4">
+        <h1 className="font-semibold text-mainColor text-xl sm:text-2xl">Welcome Back!</h1>
 
         <div className="flex flex-col w-full items-center">
           <Formik
@@ -46,7 +46,7 @@ export default function LoginPage() {
             validationSchema={validationSchema}
             onSubmit={handleSubmit}
           >
-            <Form className="w-200 p-4   flex flex-col gap-6">
+            <Form className="w-full max-w-sm sm:max-w-md p-4 flex flex-col gap-6">
               <UiComponant
                 name="email"
                 label="Email"

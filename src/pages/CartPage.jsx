@@ -8,8 +8,8 @@ export default function CartPage() {
       <div>
         <Herosection h={"h-[120px]"} />
       </div>
-     <div className="flex justify-center items-center">
-      <div className="container flex flex-col justify-center items-center">
+     <div className="flex justify-center items-center px-4">
+      <div className="container flex flex-col justify-center items-center gap-4">
          <CartTable />
       <PaymentSummary
         subtotal={120}

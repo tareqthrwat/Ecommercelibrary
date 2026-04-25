@@ -6,9 +6,9 @@ export default function OurMission() {
   ];
   return (
     <>
-      <div className="bg-backGrond text-[#222222] flex flex-col justify-center gap-20 items-center h-167  ">
+      <div className="bg-backGrond text-[#222222] flex flex-col justify-center gap-20 items-center px-4 py-10"> 
         <h3 className="font-bold text-4xl">Our Mission</h3>
-        <div className="flex flex-row gap-6 justify-between">
+        <div className=" grid grid-cols-1 lg:grid-cols-3 gap-6 ">
           {OurMissionData.map((el, index) => (
             <div
               key={index}

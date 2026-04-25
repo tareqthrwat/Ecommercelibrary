@@ -4,8 +4,8 @@ import BestSellerSwiper from "./BestSellerSwiper";
 
 export default function BestSellerSection() {
   return (
-    <div className="p-9 flex flex-col justify-center ">
-      <div className="flex flex-col items-center gap-20 ">
+    <div className="p-4 sm:p-9 flex flex-col justify-center ">
+      <div className="flex flex-col items-center gap-10 sm:gap-20 ">
         <BestSellerContant />
 
         <div className="w-full ">

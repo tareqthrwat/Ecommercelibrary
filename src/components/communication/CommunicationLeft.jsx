@@ -10,7 +10,7 @@ export default function CommunicationLeft() {
         <h3 className="font-bold text-[40px]">
           Have a Questions? Get in Touch
         </h3>
-        <p className="w-148 text-[#FFFFFF80] text-[18px]">
+        <p className="w-full text-[#FFFFFF80] text-[18px]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris et
           ultricies est. Aliquam in justo varius, sagittis neque ut, malesuada
           leo.

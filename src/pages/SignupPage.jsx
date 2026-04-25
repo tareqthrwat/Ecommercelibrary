@@ -66,7 +66,7 @@ export default function SignupPage() {
   return (
     <>
       <Herosection h="h-84.5" />
-      <div className="w-full  bg-[#F5F5F5] flex flex-col items-center justify-center gap-6 ">
+      <div className="w-full  bg-[#F5F5F5] flex flex-col items-center justify-center gap-6 px-4">
         {/* logic componant (formik) */}
         <Formik
           initialValues={{
@@ -81,8 +81,8 @@ export default function SignupPage() {
           onSubmit={handleRegister}
         >
           {/* ui componant  */}
-          <Form className="w-200 p-4 bg-[#F5F5F5] flex flex-col gap-4">
-            <div className="grid grid-cols-2 gap-5">
+          <Form className="w-full max-w-sm sm:max-w-md p-4 bg-[#F5F5F5] flex flex-col gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-5">
               <UiComponant
                 name="firstname"
                 label="First Name"

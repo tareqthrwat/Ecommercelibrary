@@ -13,8 +13,8 @@ export default function ProductPage() {
    
     <div className="flex flex-col justify-center items-center ">
         
-     <div className="container p-16">
-         <div className="flex gap-8 h-150 ">
+     <div className="container p-4 sm:p-8 md:p-16">
+         <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 h-auto lg:h-150 ">
         <ProductGallery {...productMock.gallery} />
         <ProductInfo {...productMock.info} />
       </div>

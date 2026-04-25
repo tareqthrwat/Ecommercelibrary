@@ -14,19 +14,19 @@ export default function BookPage() {
         <Herosection h={"h-[120px]"} />
       </div>
       <div></div>
-      <div className="flex gap-6">
+      <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 px-4">
         <FilterSidebar />
-        <div>
-          <div className="flex gap-7 p-6 mt-9  justify-around">
-            <div className="   w-139.5">
+        <div className="w-full">
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-7 p-4 sm:p-6 mt-6 sm:mt-9 justify-center sm:justify-around flex-wrap">
+            <div className="w-full sm:w-139.5">
               <Search />
             </div>
-            <div className="w-50 ">
+            <div className="w-full sm:w-50 ">
               <Dropdown title="Sort by" className={"bg-[#0000001A]"}></Dropdown>
             </div>
           </div>
           <div className="w-full flex items-center justify-between flex-col">
-            <div className="p-10 pt-0 flex flex-col gap-2 m- container">
+            <div className="p-4 sm:p-10 pt-0 flex flex-col gap-2 m- container">
               <div className="p-3">
                 <Navbtn />
               </div>
@@ -34,7 +34,7 @@ export default function BookPage() {
               <BookCard />
               <BookCard />
             </div>
-            <div className="flex items-center justify-center p-7 mt-7">
+            <div className="flex items-center justify-center p-4 sm:p-7 mt-7">
               <Pagination />
             </div>
           </div>
